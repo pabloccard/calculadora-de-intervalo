@@ -1,5 +1,4 @@
 let container_01 = document.getElementById('container-01');
-let ok_01 = document.getElementById('ok-01');
 
 let container_02 = document.getElementById('container-02');
 let ok_02 = document.getElementById('ok-02');
@@ -21,20 +20,24 @@ let minutes = '';
 let interval = 6; 
 let arrayHours = [];
 
-ok_01.addEventListener('click', ()=> {
-    container_01.style.display = 'none';
+animation(container_01)
+
+ok1.addEventListener('click', ()=> {
+    container_01.style.display = 'none'
     container_02.style.display = 'flex'
+    animation(container_02)
 })
 
-ok_02.addEventListener('click', ()=> {
+ok2.addEventListener('click', ()=> {
     if(time.value != '') {
         container_02.style.display = 'none';
         container_03.style.display = 'flex';
+        animation(container_03)
     
     }
 })
 
-ok_03.addEventListener('click', ()=> {
+ok3.addEventListener('click', ()=> {
     transform()
     calcular()
     reTransform()
@@ -42,18 +45,39 @@ ok_03.addEventListener('click', ()=> {
 
     container_03.style.display = 'none';
     container_04.style.display = 'flex';
+    animation(container_04)
 })
 
 
 leftArrow.addEventListener('click', ()=> {
-    if(interval > 0) interval --
-    intervalText.innerText = `${interval} em ${interval} horas`
+    if(interval > 0) {
+        interval --
+        animation2(`slide`,`5rem`)
+    }
+    
 })
 
 rightArrow.addEventListener('click', ()=> {
-    if(interval < 24) interval ++
-    intervalText.innerText = `${interval} em ${interval} horas`
+    if(interval < 24) {
+        interval ++
+        animation2(`slide`,`-5rem`)
+    }
 })
+
+function animation2(animation, translate) {
+    if(interval > 0 && interval < 24) {
+        intervalText.style.display = 'none'
+        intervalText.innerText = `${interval} em ${interval} horas`
+        intervalText.style.transform = `translateX(${translate})`
+        intervalText.style.display = 'flex'
+        intervalText.style.animationName = `${animation}`;
+
+        setTimeout(()=>{
+            intervalText.style.transform = 'translateX(0)'
+            intervalText.style.animationName = '';
+        },300)
+    }
+}
 
 
 
@@ -81,6 +105,12 @@ function textTransform() {
     console.log("você deve tomar seu remedio às " + hours + ":" + minutes)
 }
 
+function animation(element) {
+    element.style.animationName = 'slide';
+    // setTimeout(()=>{
+    //     element.style.animationName = '';
+    // }, 200)
+}
 
 
 
