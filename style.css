@@ -1,0 +1,107 @@
+* {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #181b1f;
+    height: 100vh;
+}
+#container-02, #container-03, #container-04 {
+    display: none;
+}
+.container {
+    width:30rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #181b1f;
+    box-shadow: 0rem 0rem 0.5rem #0e0e0e;
+    border-radius: 0.5rem; 
+}
+
+p {
+    font-size: 1.5rem;
+    color: #626a74;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+#time, #input-intervalo, .btn {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: #181b1f;
+    color: #ff9100;
+    font-weight: bold;
+    width: 8rem;
+    font-size: 1.5rem;
+    /* box-shadow: 0rem 0rem 0.3rem #1a0129; */
+}
+
+.btn{
+    width: 10rem;
+    margin-bottom: 0;
+    background-color: #6d07b1;
+    color: #d99fff;
+    box-shadow: 0rem 0rem 0.3rem #1a0129;
+}
+
+#input-intervalo::placeholder {
+    text-align: center;
+    color: #ff9100;
+}
+
+#time {
+    width: auto;
+}
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+    /* display: none; */
+    display: none;
+    font-size: 2rem;
+    background-color: #626a74;
+    position: absolute;
+ }
+
+.contador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.bx {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #ff9100;
+}
+
+#interval-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #ff9100;
+    font-size: 1.5rem;
+}
+
+#new-time {
+    color: #ff9100;
+}
+
+
+
+

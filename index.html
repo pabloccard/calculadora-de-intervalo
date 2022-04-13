@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Calculadora da Mary</title>
+</head>
+
+<body>
+
+    <div id="container-01" class="container">
+        <p>Oi neném! Vamos ver qual horário você deve tomar seu rémedio?</p>
+        <input id="ok-01" class="btn" type="submit" value="ok">
+    </div>
+
+
+    <div id="container-02" class="container">
+        <p>Vamos lá! Quando foi a ultima vêz que tomou o seu remedio?</p>
+        <input id="time" type="time" required>
+        <input id="ok-02" class="btn" type="submit" value="ok">
+    </div>
+
+
+    <div id="container-03" class="container">
+        <p>Muito bom! Agora me diz de quantas em quantas horas você precisa tomar o remedio.</p>
+        <div class="contador">
+            <i id="left-arrow" class='bx bxs-left-arrow'></i>
+            <span id="interval-text">6 em 6 horas</span>
+            <i id="right-arrow" class='bx bxs-right-arrow'></i>
+        </div>
+        <input id="ok-03" class="btn" type="submit" value="ok">
+    </div>
+
+    <div id="container-04" class="container">
+        <p>Show Show! Você deve tomar o seu rémedio às<span id="new-time"></span>!</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
