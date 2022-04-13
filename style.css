@@ -104,11 +104,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     text-shadow: 0rem 0rem 0.2rem #1a0129;
 }
 
-.bxs-left-arrow{
+.bx-chevrons-left{
     left:7rem;
 }
 
-.bxs-right-arrow {
+.bx-chevrons-right {
     right:7rem;
 }
 
@@ -125,6 +125,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: #ff9100;
     
     
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
 }
 
 
