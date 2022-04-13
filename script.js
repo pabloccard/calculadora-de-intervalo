@@ -14,6 +14,7 @@ let rightArrow = document.getElementById('right-arrow');
 let intervalText = document.getElementById('interval-text');
 
 let time = document.getElementById('time');
+time.value = '00:00'
 
 let hours = '';
 let minutes = '';
