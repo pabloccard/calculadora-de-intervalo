@@ -98,10 +98,10 @@ p {
 }
 
 
-/* input[type="time"]::-webkit-calendar-picker-indicator {
+input[type="time"]::-webkit-calendar-picker-indicator {
     filter: invert(0.5) sepia() saturate(5) hue-rotate();
     color: #ff9100;
- } */
+ }
 
 .contador {
     display: flex;
