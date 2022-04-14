@@ -18,9 +18,9 @@
     border: none;
 }
 body{
+    padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: #181b1f;
 }
@@ -28,7 +28,7 @@ body{
     display: none;
 }
 .container {
-    max-width:30rem;
+    max-width: 300px;
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -45,17 +45,21 @@ body{
 
 
 p {
-    font-size: 1.5rem;
+    font-size: 15px;
     color: #626a74;
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.txt {
+    font-size: 15px;
 }
 
 
 
 
 
-#time, #input-intervalo, .btn {
-    margin-bottom: 2.5rem;
+#time, .btn {
+    margin-bottom: 40px;
     cursor: pointer;
     padding: 0.5rem;
     outline: none;
@@ -64,13 +68,14 @@ p {
     color: #ff9100;
     font-weight: bold;
     width: 8rem;
-    font-size: 1.5rem;
+    font-size: 15px;
     /* box-shadow: 0rem 0rem 0.3rem #1a0129; */
 }
 
 .btn{
     width: 10rem;
-    margin-bottom: 0rem;
+  
+    margin-bottom: 0;
     background-color: #6d07b1;
     color: #d99fff;
     box-shadow: 0rem 0rem 0.3rem #1a0129;
@@ -91,31 +96,31 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
 
 }
 
 .bx {
     position: absolute;
     cursor: pointer;
-    font-size: 3rem;
     color: #6d07b1;
     text-shadow: 0rem 0rem 0.2rem #1a0129;
+    font-size: 50px;
 }
 
 .bx-chevrons-left{
-    left:7em;
+    left: 30px;
 }
 
 .bx-chevrons-right {
-    right:7em;
+    right: 30px;
 }
 
 #interval-text {
     margin-left: 1rem;
     margin-right: 1rem;
     color: #ff9100;
-    font-size: 1.5rem;
+    font-size: 15px;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
 }
@@ -131,21 +136,21 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        padding: 3rem;
-    }
+    /* body {
+        padding: 2rem;
+    } */
 
-    .bx-chevrons-left{
-        left:5rem;
+    /* .bx-chevrons-left{
+        left:4rem;
     }
 
     .bx-chevrons-right {
-        right:5rem;
-    }
+        right:0rem;
+    } */
 
-    *{
-        font-size: 10px;
-    }
+    /* *{
+        font-size: 11px;
+    } */
 }
 
 

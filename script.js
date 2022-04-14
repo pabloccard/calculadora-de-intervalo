@@ -1,10 +1,9 @@
 let container_01 = document.getElementById('container-01');
-
 let container_02 = document.getElementById('container-02');
-let ok_02 = document.getElementById('ok-02');
-
 let container_03 = document.getElementById('container-03');
-let ok_03 = document.getElementById('ok-03');
+let apelido = document.getElementById('apelido');
+
+
 
 let container_04 = document.getElementById('container-04');
 let new_time = document.getElementById('new-time');
@@ -12,16 +11,22 @@ let new_time = document.getElementById('new-time');
 let leftArrow = document.getElementById('left-arrow');
 let rightArrow = document.getElementById('right-arrow');
 let intervalText = document.getElementById('interval-text');
+let final = document.getElementById('final');
 
 let time = document.getElementById('time');
 time.value = '00:00'
-
+let newTime ='';
+let toptop = '';
 let hours = '';
 let minutes = '';
 let interval = 6; 
 let arrayHours = [];
+let apelidosArr = [' meu bem', ' neném', ' bb', ' meu amor', ' meu amorzinho',' minha princesa', ' meu anjo', ' gatinha', ' lindona'];
+
+let arr = ['Show Show', 'Muito bom', 'Top top', 'Show', 'Top'];
 
 animation(container_01)
+apelidos()
 
 ok1.addEventListener('click', ()=> {
     container_01.style.display = 'none'
@@ -92,25 +97,35 @@ function transform() {
 }
 
 function calcular() {
-    hours = hours + Number(interval);
+    newTime = hours + Number(interval);
     if(hours > 23) hours = hours - 24;
 }
 
 function reTransform() {
     if(hours < 10) hours = '0' + hours
+    if(hours < 10) hours = '0' + hours
+    
+    if(newTime < 10) newTime = '0' + newTime
     if(minutes < 10) minutes = '0' + minutes
 }
 
 function textTransform() {
-    new_time.innerText = " " + hours + ":" + minutes 
+    final.innerText = toptop + '! Agora você precisa tomar o seu remédio às '
+    new_time.innerText = " " + newTime + ":" + minutes 
     console.log("você deve tomar seu remedio às " + hours + ":" + minutes)
 }
 
 function animation(element) {
     element.style.animationName = 'slide';
-    // setTimeout(()=>{
-    //     element.style.animationName = '';
-    // }, 200)
+}
+
+function apelidos() {
+
+    toptop = arr[Math.floor(Math.random() * arr.length)];
+    
+    apelido.innerHTML = apelidosArr[Math.floor(Math.random() * apelidosArr.length)];
+
+    
 }
 
 
